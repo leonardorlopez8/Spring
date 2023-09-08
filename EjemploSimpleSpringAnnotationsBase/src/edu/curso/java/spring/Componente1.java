@@ -11,4 +11,6 @@ public interface Componente1 {
 	void mostrarT();
 
 	void setComponente2(Componente2 componente2);
+	
+	void haceralgoEnComponente1();
 }

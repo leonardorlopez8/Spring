@@ -1,7 +1,7 @@
 package edu.curso.java.spring;
 
 import org.springframework.stereotype.Component;
-
+/*
 @Component ("miComponente5")
 public class MiComponente5Impl implements MiComponente4{
 	
@@ -13,4 +13,6 @@ public class MiComponente5Impl implements MiComponente4{
 	public void saludar() {
 		System.out.println("Hola, ojo qeu soy el MiComponente4Impl ");
 	}
+
 }
+	*/

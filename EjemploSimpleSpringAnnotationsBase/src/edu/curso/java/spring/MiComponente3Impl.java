@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-
+/*
 @Component("madonna")
 @Scope("prototype")
 public class MiComponente3Impl implements MiComponente3 {
@@ -22,4 +22,7 @@ public class MiComponente3Impl implements MiComponente3 {
 		System.out.println("Hola, soy el compomente MiComponente3Impl...");
 		miComponente4.saludar();
 	}
+	
+
 }
+*/

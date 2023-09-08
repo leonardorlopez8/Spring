@@ -26,12 +26,36 @@
 		http://www.springframework.org/schema/task
 		http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 
-	<context:component-scan
-		base-package="edu.curso.java.spring" />
+	<context:component-scan base-package="edu.curso.java.spring" />
+
+<bean id="saludoService" class="edu.curso.java.spring.SaludoServiceImpl">
+    <property name="mensaje" value="¡Hola mediante setter!" />
+</bean>
+
+<bean id="saludoServiceConstructor" class="edu.curso.java.spring.SaludoConstructorImpl">
+    <constructor-arg value="¡Hola mediante constructor!" />
+</bean>
+
+
+<context:annotation-config />
+<bean id="saludoServiceAnnotation" class="edu.curso.java.spring.SaludoAnnotationImpl" />
+
+
+
+
+<!-- 
+<bean name="componente1Impl" class="edu.curso.java.spring.Componente1Impl" scope="singleton" >   
+</bean>
+
+<bean name="componente2Impl" 		class="edu.curso.java.spring.Componente2Impl" scope="singleton" >   
+		<property name="componente1" ref="componente1Impl"></property>
+</bean>
+
+
 
 	<bean name="componente1"
 		class="edu.curso.java.spring.Componente1Impl" scope="prototype">   
-<!-- 		name=nombre que le quiero dar al componente (instancia) -->
+
 		<property name="texto" value="Hola mundo spring!!!"></property>
 		<property name="componente2" ref="compomente2Referencia"></property>
 	</bean>
@@ -39,15 +63,15 @@
 	<bean name="compomente2Referencia"
 		class="edu.curso.java.spring.Componente2Impl" scope="singleton"
 		lazy-init="true">   
-<!-- 		name=nombre que le quiero dar al componente (instancia) -->
+ 		name=nombre que le quiero dar al componente (instancia) 
 		<property name="texto" value="Soy el componente2"></property>
 	</bean>
 
 	<bean name="componente3"
 		class="edu.curso.java.spring.Componente2Impl" scope="singleton"
 		lazy-init="true">   
-<!-- 		name=nombre que le quiero dar al componente (instancia) -->
+		name=nombre que le quiero dar al componente (instancia) 
 		<property name="texto" value="Soy el componente3"></property>
 	</bean>
-
+-->
 </beans>

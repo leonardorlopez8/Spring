@@ -5,20 +5,16 @@
        <layout class="org.apache.log4j.PatternLayout"> 
           <param name="ConversionPattern" value="%d %-5p %c.%M:%L - %m%n"/> 
        </layout> 
-    </appender>
-    
+    </appender>  
     <logger name="org.hibernate.type">
     	<level value="WARN" />
     </logger>
-
     <logger name="org.hibernate.tool.hbm2ddl">
     	<level value="WARN" />
-    </logger> 
-    
+    </logger>     
      <root>
         <priority value="INFO"/> 
         <appender-ref ref="STDOUT" /> 
-     </root> 
-    
+     </root>    
 </log4j:configuration> 
 

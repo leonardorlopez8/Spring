@@ -2,7 +2,9 @@ package edu.curso.java.spring;
 
 public interface Componente2 {
 
-	String getTexto();
+	void hacerAlgoEnComponente2();
 
-	void setTexto(String texto);
+	//String getTexto();
+
+	//void setTexto(String texto);
 }

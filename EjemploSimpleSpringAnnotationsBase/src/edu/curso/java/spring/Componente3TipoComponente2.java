@@ -1,5 +1,5 @@
 package edu.curso.java.spring;
-
+/*
 public class Componente3TipoComponente2 implements Componente2 {
 
 	@Override
@@ -12,3 +12,4 @@ public class Componente3TipoComponente2 implements Componente2 {
 	}
 
 }
+*/
