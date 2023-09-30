@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import edu.curso.spring1.primerospasos1.bo.Producto;
@@ -38,6 +39,20 @@ public class ProductosRestController {
     	}
     	return productosDTO;
     }
+    
+    
+    @GetMapping("/buscar")
+    public List<ProductoDTO> buscarProductosPorNombre(@RequestParam String nombre) {
+    List<Producto> productos = productoService.recuperarProductosPorNombre(nombre);
+    List<ProductoDTO> productosDTO = new ArrayList<ProductoDTO>();
+      for (Producto p : productos) {
+      productosDTO.add(new ProductoDTO(p));
+     }
+    return productosDTO;
+
+    }
+
+    
     @PostMapping
     public ProductoDTO altaDeNuevoProducto(@RequestBody ProductoDTO productoDTO) {
     	Producto producto = new Producto();

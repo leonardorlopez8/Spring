@@ -74,4 +74,10 @@ private static Logger log = LoggerFactory.getLogger(ProductoServiceImpl.class);
 		
 	}
 
+
+	@Override
+	public List<Producto> recuperarProductosPorNombre(String nombre) {
+		return productoRepository.buscarProductosPorNombre(nombre);
+	}
+
 }
